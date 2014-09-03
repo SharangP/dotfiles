@@ -18,6 +18,7 @@ set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
+set laststatus=2                "Airline
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -29,7 +30,7 @@ syntax on
 
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
-" The mapleader has to be set before vundle starts loading all 
+" The mapleader has to be set before vundle starts loading all
 " the plugins.
 let mapleader=","
 
@@ -71,7 +72,7 @@ filetype indent on
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
 
-set nowrap       "Don't wrap lines
+set nolist       "nolist diables linebreak
 set linebreak    "Wrap lines at convenient points
 
 " ================ Folds ============================
@@ -101,7 +102,9 @@ set wildignore+=*.png,*.jpg,*.gif
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
-
+set mouse=a
+map j gj
+map k gk
 
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
