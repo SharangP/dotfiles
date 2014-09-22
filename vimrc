@@ -50,11 +50,11 @@ set nowb
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
 " Only works all the time.
-if has('persistent_undo')
-  silent !mkdir ~/.vim/backups > /dev/null 2>&1
-  set undodir=~/.vim/backups
-  set undofile
-endif
+" if has('persistent_undo')
+"   silent !mkdir ~/.vim/backups > /dev/null 2>&1
+"   set undodir=~/.vim/backups
+"   set undofile
+" endif
 
 " ================ Indentation ======================
 
@@ -102,9 +102,13 @@ set wildignore+=*.png,*.jpg,*.gif
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
-set mouse=a
+set mouse=icr
 map j gj
 map k gk
 
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
+
+"pasting
+set pastetoggle=<leader>p
+
