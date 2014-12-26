@@ -109,6 +109,6 @@ map k gk
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
 
-"pasting
 set pastetoggle=<leader>p
-
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
